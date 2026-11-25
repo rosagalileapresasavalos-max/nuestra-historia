@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Javier ♡</title>
+
+<!-- ICONO PERSONALIZADO -->
+<link rel="icon" type="image/png" href="imagenes/icono.png">
+<link rel="apple-touch-icon" href="imagenes/icono.png">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="portada">
+
+        <nav class="menu">
+            <h2>J & G ♡</h2>
+
+            <div>
+                <a href="#inicio">Inicio</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#recuerdos">Recuerdos</a>
+                <a href="#carta">Mi carta</a>
+            </div>
+        </nav>
+
+        <main id="inicio" class="contenido-portada">
+
+            <p class="fecha">29 · 11 · 2026</p>
+
+            <h1>Happy Birthday</h1>
+
+            <h2>Javier ♡</h2>
+
+            <p>
+                Hoy celebramos a una persona muy especial.
+                Y esta pequeña página es solamente para ti.
+            </p>
+
+            <a href="#historia" class="boton">
+                Descubre nuestra historia ♡
+            </a>
+
+        </main>
+
+        <div class="decoracion">♡ ✧ ♡</div>
+
+    </header>
+
+
+<!-- ===== NUESTRA HISTORIA ===== -->
+
+<section id="historia" class="historia">
+
+    <div class="encabezado-seccion">
+
+        <span class="etiqueta">✧ NUESTROS RECUERDOS ✧</span>
+
+        <h2>Un poquito de nosotros</h2>
+
+        <p>
+            Hay momentos que quisiera guardar en un lugar
+            donde el tiempo nunca pudiera borrarlos.
+        </p>
+
+        <div class="adorno-linea">♡ ───── ✧ ───── ♡</div>
+
+    </div>
+
+    <!-- CARRUSEL DE FOTOGRAFÍAS -->
+
+    <div class="carrusel-fotos">
+
+        <button class="flecha-carrusel anterior"
+            type="button"
+            onclick="cambiarFoto(-1)"
+            aria-label="Fotografía anterior">
+            ‹
+        </button>
+
+        <div class="ventana-carrusel">
+
+            <div class="pista-fotos" id="pista-fotos">
+
+                <!-- FOTOGRAFÍA 1 -->
+
+                <article class="diapositiva-foto activa">
+
+                    <button class="foto-boton"
+                        type="button"
+                        onclick="abrirRecuerdo(this)"
+                        data-titulo="Un momento especial"
+                        data-fecha="Nuestro primer recuerdo"
+                        data-descripcion="Aquí podremos escribir la historia de este momento tan bonito.">
+
+                        <img src="imagenes/foto1.jpg"
+                            alt="Nuestro primer recuerdo">
+
+                        <span class="ver-foto">✧ VER RECUERDO ✧</span>
+
+                    </button>
+
+                    <div class="texto-recuerdo">
+                        <span class="numero">01 — RECUERDO</span>
+                        <h3>Un momento especial</h3>
+                        <p>De esos momentos que quisiera repetir una y otra vez.</p>
+                    </div>
+
+                </article>
+
+                <!-- FOTOGRAFÍA 2 -->
+
+                <article class="diapositiva-foto">
+
+                    <button class="foto-boton"
+                        type="button"
+                        onclick="abrirRecuerdo(this)"
+                        data-titulo="Mis días favoritos"
+                        data-fecha="Un día para recordar"
+                        data-descripcion="Cada instante contigo tiene algo que lo hace especial.">
+
+                        <img src="imagenes/foto2.jpg"
+                            alt="Un día juntos">
+
+                        <span class="ver-foto">✧ VER RECUERDO ✧</span>
+
+                    </button>
+
+                    <div class="texto-recuerdo">
+                        <span class="numero">02 — RECUERDO</span>
+                        <h3>Mis días favoritos</h3>
+                        <p>Porque contigo hasta lo más sencillo se vuelve bonito.</p>
+                    </div>
+
+                </article>
+
+                <!-- FOTOGRAFÍA 3 -->
+
+                <article class="diapositiva-foto">
+
+                    <button class="foto-boton"
+                        type="button"
+                        onclick="abrirRecuerdo(this)"
+                        data-titulo="Contigo"
+                        data-fecha="Un recuerdo más de nosotros"
+                        data-descripcion="Y todavía nos quedan muchísimos momentos por compartir.">
+
+                        <img src="imagenes/foto3.jpg"
+                            alt="Otro recuerdo juntos">
+
+                        <span class="ver-foto">✧ VER RECUERDO ✧</span>
+
+                    </button>
+
+                    <div class="texto-recuerdo">
+                        <span class="numero">03 — RECUERDO</span>
+                        <h3>Contigo</h3>
+                        <p>Mi parte favorita de muchos de mis recuerdos.</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <button class="flecha-carrusel siguiente"
+            type="button"
+            onclick="cambiarFoto(1)"
+            aria-label="Fotografía siguiente">
+            ›
+        </button>
+
+    </div>
+
+    <!-- INDICADORES -->
+
+    <div class="controles-carrusel">
+
+        <div class="indicadores-fotos" id="indicadores-fotos">
+
+            <button class="indicador activo"
+                onclick="irAFoto(0)"
+                aria-label="Ver fotografía 1"></button>
+
+            <button class="indicador"
+                onclick="irAFoto(1)"
+                aria-label="Ver fotografía 2"></button>
+
+            <button class="indicador"
+                onclick="irAFoto(2)"
+                aria-label="Ver fotografía 3"></button>
+
+        </div>
+
+        <span class="contador-fotos" id="contador-fotos">
+            01 / 03
+        </span>
+
+    </div>
+
+    <div class="final-galeria">
+        <p>Y estos son solamente algunos de nuestros recuerdos...</p>
+        <span>♡ Todavía nos faltan muchísimos por crear ♡</span>
+    </div>
+
+</section>
+
+
+<!-- ===== VISOR DE FOTOGRAFÍAS ===== -->
+
+<div id="visor" class="visor" aria-hidden="true">
+
+    <div class="visor-contenido">
+
+        <button class="cerrar-visor"
+            type="button"
+            onclick="cerrarRecuerdo()"
+            aria-label="Cerrar ventana">
+            ×
+        </button>
+
+        <img id="imagen-ampliada"
+            src=""
+            alt="Recuerdo ampliado">
+
+        <div class="informacion-visor">
+
+            <span id="fecha-ampliada"></span>
+
+            <h2 id="titulo-ampliado"></h2>
+
+            <p id="descripcion-ampliada"></p>
+
+            <span class="corazon-visor">♡</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===== GALERÍA CINEMATOGRÁFICA DE VIDEOS ===== -->
+
+<section id="videos" class="seccion-videos">
+
+    <div class="encabezado-seccion">
+
+        <span class="etiqueta">✧ MOMENTOS EN MOVIMIENTO ✧</span>
+
+        <h2>Nuestros recuerdos en película</h2>
+
+        <p>
+            Hay momentos que merecen volver a reproducirse,
+            porque algunos recuerdos nunca pasan de moda.
+        </p>
+
+        <div class="adorno-linea">♡ ───── ✧ ───── ♡</div>
+
+    </div>
+
+    <!-- CUADRÍCULA DE VIDEOS -->
+
+    <div class="galeria-videos">
+
+        <!-- VIDEO 1 -->
+
+        <article class="tarjeta-video">
+
+            <button class="miniatura-video"
+                type="button"
+                onclick="abrirVideo(this)"
+                data-video="videos/video1.mp4"
+                data-titulo="Un momento para recordar"
+                aria-label="Reproducir video 1">
+
+                <video muted playsinline preload="metadata">
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+
+                <span class="icono-play">▶</span>
+
+                <span class="etiqueta-video">PELÍCULA 01</span>
+
+            </button>
+
+            <div class="descripcion-video">
+
+                <span>✧ RECUERDO EN VIDEO 01 ✧</span>
+
+                <h3>Un momento para recordar</h3>
+
+                <p>
+                    Algunos instantes merecen reproducirse
+                    una y otra vez.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- VIDEO 2 -->
+
+        <article class="tarjeta-video">
+
+            <button class="miniatura-video"
+                type="button"
+                onclick="abrirVideo(this)"
+                data-video="videos/video2.mp4"
+                data-titulo="Momentos felices"
+                aria-label="Reproducir video 2">
+
+                <video muted playsinline preload="metadata">
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+
+                <span class="icono-play">▶</span>
+
+                <span class="etiqueta-video">PELÍCULA 02</span>
+
+            </button>
+
+            <div class="descripcion-video">
+
+                <span>✧ RECUERDO EN VIDEO 02 ✧</span>
+
+                <h3>Momentos felices</h3>
+
+                <p>
+                    Pequeños recuerdos que siempre
+                    tendrán un lugar especial.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <div class="frase-videos">
+
+        <span>♡</span>
+
+        <p>Quisiera poder guardar cada segundo bonito contigo.</p>
+
+        <span>♡</span>
+
+    </div>
+
+</section>
+
+
+<!-- ===== REPRODUCTOR AMPLIADO ===== -->
+
+<div id="visor-video"
+    class="visor-video"
+    aria-hidden="true">
+
+    <div class="contenido-visor-video">
+
+        <button class="cerrar-video"
+            type="button"
+            onclick="cerrarVideo()"
+            aria-label="Cerrar reproductor">
+            ×
+        </button>
+
+        <span class="titulo-visor-video" id="titulo-video">
+            Nuestro recuerdo
+        </span>
+
+        <div class="marco-reproductor">
+
+            <video id="video-ampliado"
+                controls
+                playsinline
+                preload="metadata">
+
+                Tu navegador no puede reproducir este video.
+
+            </video>
+
+        </div>
+
+        <div class="controles-video">
+
+            <button type="button"
+                onclick="pantallaCompletaVideo()">
+                ⛶ PANTALLA COMPLETA
+            </button>
+
+        </div>
+
+        <span class="decoracion-video">♡ ✧ ♡</span>
+
+    </div>
+
+</div>
+
+<!-- ===== NUESTRA LÍNEA DEL TIEMPO ===== -->
+
+<section id="recuerdos" class="seccion-recuerdos">
+
+    <div class="encabezado-seccion">
+        <span class="etiqueta-seccion">NUESTROS MOMENTOS</span>
+        <h2>Nuestra pequeña <span>historia</span></h2>
+        <p>Un montón de momentos que siempre voy a guardar en mi corazón.</p>
+    </div>
+
+    
+<div class="linea-tiempo">
+
+    <!-- RECUERDO 1 -->
+    <article class="momento-tiempo">
+        <div class="punto-tiempo"></div>
+
+        <div class="foto-tiempo">
+            <img src="imagenes/foto7.jpg" alt="El día que nos conocimos">
+        </div>
+
+        <div class="texto-tiempo">
+            <span class="fecha-tiempo">RECUERDO 01</span>
+            <h3>El día que nos conocimos ♡</h3>
+            <p>
+                Todo comenzó con una conversación y unas ganas de vernos.
+                Me dijiste que querías visitarme en mi trabajo y, aunque
+                pensé que no llegarías, apareciste de sorpresa. Todavía
+                recuerdo mi cara cuando te vi y terminé preguntándote:
+                «¿Qué onda? ¿Sí llegaste?». Fueron solamente diez minutos,
+                una visita inesperada y unas tortillas que hicieron de
+                ese día un recuerdo inolvidable. ♡
+            </p>
+        </div>
+    </article>
+
+    <!-- RECUERDO 2 -->
+    <article class="momento-tiempo">
+        <div class="punto-tiempo"></div>
+
+        <div class="foto-tiempo">
+            <img src="imagenes/foto6.jpg" alt="Un mensaje muy especial">
+        </div>
+
+        <div class="texto-tiempo">
+            <span class="fecha-tiempo">RECUERDO 02</span>
+            <h3>Los detalles que se quedan ♡</h3>
+            <p>
+                Recuerdo aquel día que estuvimos juntos y después me
+                escribiste algo que llegó muchísimo a mi corazón.
+                Me dijiste:
+                <em>«Ayer que vi tu carita cuando te dije que me iba
+                a ir, vi tus ojitos de amor y tristeza. En ese momento
+                me sentí amado y me di cuenta de que no te soltaré nunca».</em>
+                Fue uno de esos mensajes que quisiera guardar para
+                siempre. Porque tus pequeños detalles significan
+                muchísimo para mí. ♡
+            </p>
+        </div>
+    </article>
+
+    <!-- RECUERDO 3 -->
+    <article class="momento-tiempo">
+        <div class="punto-tiempo"></div>
+
+        <div class="foto-tiempo">
+            <img src="imagenes/foto4.jpg" alt="Un abrazo contigo">
+        </div>
+
+        <div class="texto-tiempo">
+            <span class="fecha-tiempo">RECUERDO 03</span>
+            <h3>Mi lugar favorito ♡</h3>
+            <p>
+                Hay algo que siempre consigue hacerme sonreír:
+                recordar que, sin importar qué tan difícil haya sido
+                mi día, siempre existen esos momentos en los que
+                puedo estar contigo. Amo cuando estás aquí conmigo,
+                cuando nos abrazamos y puedo quedarme entre tus
+                brazos sintiéndome segura y tranquila. No necesitamos
+                hacer algo extraordinario; me basta con tenerte
+                cerquita. Si estoy contigo, siempre encuentro
+                un motivo para sonreír. ♡
+            </p>
+        </div>
+    </article>
+
+</div>
+
+</section>
+
+<!-- ===== CARTA ESPECIAL ===== -->
+<section id="carta" class="seccion-carta">
+
+    <div class="encabezado-seccion">
+        <span class="etiqueta-seccion">UNA SORPRESA PARA TI</span>
+        <h2>Una carta para <span>Javier</span></h2>
+        <p>Hay cosas que merecen escribirse con el corazón.</p>
+    </div>
+
+    <div class="contenedor-carta">
+        <div class="sobre-carta" id="sobre-carta">
+
+            <div class="carta-interior">
+                <span class="detalle-carta">♡ PARA TI ♡</span>
+                <h3>Feliz cumpleaños</h3>
+                
+            
+            <p id="mensaje-carta">Feliz cumpleaños, mi vida. ❤️
+            Hoy es un día muy especial, porque es el día en que nació una de las personas más bonitas e importantes de mi vida: tú. No sabes lo feliz que me hace poder celebrar un año más de tu vida, tenerte conmigo y decirte lo mucho que te amo.
+
+            Quiero que sepas que eres una de las cosas más bonitas que me han pasado. Desde que llegaste a mi vida, has hecho que mis días sean más felices, que mis sonrisas sean más sinceras y que mi corazón tenga un motivo más para sentirse lleno de amor. Es muy bonito tener a alguien como tú, alguien que me alegra incluso en mis días más difíciles y que, sin darse cuenta, se ha convertido en mi lugar favorito.
+
+            Te amo muchísimo, mi vida. A veces ni siquiera sé cómo explicar con palabras todo lo que siento por ti. Te amo por lo que eres, por tu forma de ser, por tu sonrisa, por tus ocurrencias y por cada pequeño detalle que me hace enamorarme un poquito más. Gracias por tantos momentos bonitos y por ser esa persona con la que quiero compartir mis días.
+
+            Eres mi persona favorita, mi niño bonito, mi felicidad y alguien a quien quiero cuidar y hacer sentir amado siempre. Si pudiera pedir algo para ti en este día, sería que la vida te regalara muchísima felicidad, que todos tus sueños se fueran cumpliendo y que nunca te faltaran motivos para sonreír. Deseo de todo corazón que este nuevo año esté lleno de cosas hermosas y momentos inolvidables, porque mereces lo más bonito del mundo.
+
+            También deseo poder seguir estando a tu lado, acompañándote en tus alegrías, apoyándote en tus días difíciles, celebrando tus logros y creando muchísimos recuerdos juntos. Quiero seguir conociéndote, seguir enamorándome de ti y seguir demostrándote todos los días lo importante que eres para mí.
+
+            Gracias por existir, por ser tú y por hacerme tan feliz. Gracias por ocupar un lugar tan especial en mi corazón.
+
+            Feliz cumpleaños, mi vida. Espero que hoy te sientas tan amado como realmente lo eres. Nunca olvides que tienes a alguien que te ama con todo su corazón y que se siente muy afortunada de tenerte en su vida.
+
+            Te amo muchísimo. Eres y siempre serás mi persona favorita. ❤️</p>
+            </p>
+
+            <span class="firma-carta">Con cariño, G ♡</span>
+            </div>
+
+            <div class="tapa-sobre"></div>
+            <div class="frente-sobre"></div>
+            <div class="sello-sobre">♡</div>
+
+        </div>
+
+        <button class="boton-abrir-carta" id="boton-carta"
+                type="button" onclick="abrirCarta()">
+            ABRIR MI CARTA ✧
+        </button>
+
+    </div>
+
+<div class="corazones-carta" id="corazones-carta" aria-hidden="true"></div>
+
+</section>
+
+<!-- SORPRESA FINAL -->
+<section class="sorpresa-final" id="sorpresa">
+
+    <span class="decoracion-sorpresa">✧ ♡ ✧</span>
+
+    <h2>Feliz cumpleaños, mi persona favorita ♡</h2>
+
+    <p>
+        Un año más de ti, y qué bonito que la vida me permita
+        compartirlo contigo.
+    </p>
+
+    <button id="botonSorpresa">
+        Toca aquí, cumpleañero ♡
+    </button>
+
+   <!-- CAJITA DE REGALO -->
+<div class="regalo-sorpresa" id="regaloSorpresa">
+
+    <p>Hay algo más para ti... ♡</p>
+
+    <button class="caja-regalo" id="abrirRegalo"
+            aria-label="Abrir regalo">
+
+        <span class="tapa-regalo"></span>
+        <span class="cinta-vertical"></span>
+        <span class="cinta-horizontal"></span>
+
+    </button>
+
+    <span class="texto-regalo">¡Ábreme! ♡</span>
+    <div id="contenedorConfeti"></div>
+
+</div>
+
+<!-- MENSAJE Y FOTO -->
+<div class="mensaje-sorpresa" id="mensajeSorpresa">
+
+    <h3>Una última cosita para ti... ♡</h3>
+
+    <img src="imagenes/foto5.jpg" alt="Un recuerdo especial">
+
+    <p>
+        Gracias por formar parte de mi vida y por regalarme
+        tantos momentos que quiero guardar para siempre.
+        Espero que este sea uno de muchísimos cumpleaños
+        que podamos celebrar juntos. Te amo muchísimo. ♡
+    </p>
+
+    <button id="cerrarSorpresa" class="boton-cerrar-sorpresa">
+        CERRAR MI SORPRESA ♡
+    </button>
+
+</div>
+
+<!-- REPRODUCTOR DE MÚSICA -->
+<div class="reproductor-musica">
+    <button id="botonMusica">♫ Reproducir música</button>
+
+    <audio id="musicaFondo" loop>
+        <source src="audio/musica.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
